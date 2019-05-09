@@ -1,0 +1,19 @@
+<p>- You :</p>
+<h1><%= @message %></h1>
+
+<br>
+<br>
+
+<p>- Your Coach : </p>
+
+<% if @message == 'I am going to work' %>
+  <h2>Great!</h2>
+<% elsif @message.split('').include?('?') %>
+  <h2>Silly question, get dressed and go to work!</h2>
+<% else %>
+  <h2>I don't care, get dressed and go to work!</h2>
+<% end %>
+
+
+
+<%= link_to 'Ask another question', ask_path %>
